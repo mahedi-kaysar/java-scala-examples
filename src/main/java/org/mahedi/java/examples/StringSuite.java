@@ -26,14 +26,31 @@ public class StringSuite {
 		return false;
 	}
 
+	/**
+	 * 
+	 * @param s
+	 * @return
+	 */
+	public static String getReverse(String s) {
+
+		if (s == null)
+			throw new IllegalArgumentException("Argument was null!");
+		int len = s.length();
+		if (len == 0 || len == 1)
+			return s;
+		return getReverse(s.substring(1, len)) + s.charAt(0);
+	}
+
 	public static void main(String[] args) {
+		// isPalindrome
 		System.out.println(StringSuite.isPalindrome("madam"));
-		System.out.println(StringSuite.isPalindrome("aab"));
-		System.out.println(StringSuite.isPalindrome("aa"));
-		System.out.println(StringSuite.isPalindrome("an"));
 		System.out.println(StringSuite.isPalindrome("a"));
 		System.out.println(StringSuite.isPalindrome(""));
-		System.out.println(StringSuite.isPalindrome(null));
+
+		// getReverse
+		System.out.println(StringSuite.getReverse("abcd"));
+		System.out.println(StringSuite.getReverse("a"));
+
 
 	}
 

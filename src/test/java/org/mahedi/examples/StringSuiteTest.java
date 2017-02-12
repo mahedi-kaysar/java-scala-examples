@@ -36,4 +36,15 @@ public class StringSuiteTest {
 		assertEquals("", true, StringSuite.isPalindrome(s));
 		
 	}
+	
+	/**
+	 * 
+	 * Test method for checking null input to
+	 * {@link org.mahedi.java.examples.StringSuite#getReverse(java.lang.String)}.
+	 */
+	@Test(expected = IllegalArgumentException.class)
+	public void testGetReverseMethodForNullParam(){
+		String s = null;
+		StringSuite.getReverse(s);
+	}
 }
