@@ -47,4 +47,26 @@ public class StringSuiteTest {
 		String s = null;
 		StringSuite.getReverse(s);
 	}
+	
+	/**
+	 * 
+	 * Test method for checking null input to
+	 * {@link org.mahedi.java.examples.StringSuite#sortByAlphabet(java.lang.String)}.
+	 */
+	@Test(expected = IllegalArgumentException.class)
+	public void testSortByAlphabetMethodForNullParam(){
+		String s = null;
+		StringSuite.sortByAlphabet(s);
+	}
+	
+	/**
+	 * 
+	 * Test method for checking non-letters input to
+	 * {@link org.mahedi.java.examples.StringSuite#sortByAlphabet(java.lang.String)}.
+	 */
+	@Test(expected = IllegalArgumentException.class)
+	public void testSortByAlphabetMethodForNonLetterParam(){
+		String s = "XzZ123";
+		StringSuite.sortByAlphabet(s);
+	}
 }
