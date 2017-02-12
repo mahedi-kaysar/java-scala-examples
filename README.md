@@ -1,1 +1,2 @@
 #Java-Scala-Examples
+The aim of the project is to practice programming using both Java and Scala language, so that, the basic differences between them can be identified easily. The project will be helpful for the java developers who wants to develop project in scala.
